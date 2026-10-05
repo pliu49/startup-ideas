@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — MonsterDangDang 怪兽当当</title>
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="container">
+  <div class="breadcrumb" style="margin-top:20px;">
+    <a href="index.html" data-i18n="nav.home"></a> / <a href="shop.html" data-i18n="nav.shop"></a> / <span id="crumb-name"></span>
+  </div>
+</div>
+
+<div class="container product-detail" id="product-detail"></div>
+
+<section class="section section-alt" id="related-section">
+  <div class="container">
+    <h2 class="section-title" data-i18n="product.related" style="font-size:22px;margin-bottom:0;"></h2>
+    <div class="related-grid" id="related-grid"></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<div class="toast" id="toast"></div>
+
+<script src="js/products.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  renderHeader("shop");
+  renderFooter();
+  initProductPage();
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All — MonsterDangDang 怪兽当当</title>
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="page-header container">
+  <h1 data-i18n="shop.title"></h1>
+</div>
+
+<section class="section" style="padding-top:24px;">
+  <div class="container">
+    <div class="filter-bar">
+      <div class="filter-tabs" id="filter-tabs">
+        <button class="filter-tab" data-filter="all" data-i18n="shop.filter.all"></button>
+        <button class="filter-tab" data-filter="magic" data-i18n="shop.filter.magic"></button>
+        <button class="filter-tab" data-filter="folio" data-i18n="shop.filter.folio"></button>
+      </div>
+      <select class="sort-select" id="sort-select">
+        <option value="default" data-i18n="shop.sort.default"></option>
+        <option value="priceAsc" data-i18n="shop.sort.priceAsc"></option>
+        <option value="priceDesc" data-i18n="shop.sort.priceDesc"></option>
+      </select>
+    </div>
+    <div class="product-grid" id="shop-grid"></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<div class="toast" id="toast"></div>
+
+<script src="js/products.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  renderHeader("shop");
+  renderFooter();
+  initShopPage();
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmed — MonsterDangDang 怪兽当当</title>
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="confirm-box">
+  <div class="confirm-icon">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  </div>
+  <h1 data-i18n="confirm.title"></h1>
+  <p><span data-i18n="confirm.desc"></span>: <span class="order-ref" id="order-ref"></span></p>
+  <p data-i18n="confirm.desc2"></p>
+  <div style="margin-top:28px;">
+    <a href="index.html" class="btn btn-primary" data-i18n="confirm.backHome"></a>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+
+<script src="js/products.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+  renderHeader("home");
+  renderFooter();
+  document.getElementById("order-ref").textContent = localStorage.getItem("mdd_last_order_ref") || "—";
+</script>
+</body>
+</html>
